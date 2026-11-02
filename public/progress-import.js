@@ -53,7 +53,7 @@ function createProgressImport(o) {
       status('Review ready. No record was replaced. Any disclosed answer-preview help remains recorded; review the incoming session below.');
       $('import-review-title').focus();
     } catch {
-      if(ticket===generation){invalidate('');status('Could not import that file. Choose a compatible Small Wins JSON export, at most 1 MB. Nothing was replaced.');}
+      if(ticket===generation){invalidate('');status('Could not import that file. Choose a compatible Learn4Free JSON export, at most 1 MB. Nothing was replaced.');}
     } finally {if(ticket===generation)target.value='';}
   }
   function apply() {

@@ -1,4 +1,6 @@
-# Small Wins
+# Learn4Free
+
+[Open Learn4Free](https://small-wins-ai-learning-coach.thabiggdogg420.chatgpt.site) · [Free4AllHub — all projects](https://free4allhub.thabiggdogg420.chatgpt.site) · Repository name remains `small-wins` for existing links.
 
 Small, practical lessons for learning to use AI: try a task, check what happened, revise it and keep a useful result. Prepared practice and external-provider handoff are distinct from optional real on-device model experiments. A completed exercise or self-report is not proof of mastery.
 
