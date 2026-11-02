@@ -1,0 +1,10 @@
+const assert=require('node:assert/strict'),fs=require('fs'),H=require('./public/handoff.js');
+for(const p of Object.values(H.providers)){assert(p.url.startsWith('https://'));assert(p.help.startsWith('https://'));assert(!p.url.includes('?'));}
+const base=H.build({context:{}});assert(base.includes('one question'));assert(base.includes('not a connection'));assert(base.includes('You do not need to browse'));assert(!base.includes('PRIVATE_TEST_GOAL'));
+const x=H.build({mode:'resume',context:{goal:'PRIVATE_TEST_GOAL',project:'Three items',nextActionNote:'Check item two'}});assert(x.includes('PRIVATE_TEST_GOAL'));assert(x.includes('Do not assume you remember'));assert(x.includes('Check item two'));assert(H.build({mode:'feedback'}).includes('Do not mark it as proven mastery'));
+const redacted=H.redact('email a.person@example.com or call +61 400 123 456; keep goal');assert(!redacted.includes('@'));assert(!redacted.includes('400 123'));assert(redacted.includes('keep goal'));
+assert.equal(fs.readFileSync('./public/coach-guide.txt','utf8').trim(),H.guide.trim());
+assert(!fs.readFileSync('./public/handoff-ui.js','utf8').includes('fetch('));assert(!fs.readFileSync('./public/handoff-ui.js','utf8').includes('apiKey'));
+console.log('PASS: three official provider routes, full self-contained guide, minimal default context, kickoff/resume/feedback builders, redaction patterns, no provider transport, guide parity');
+assert(H.guide.includes('own first attempt'));assert(H.guide.includes('Skipping recall has no penalty'));assert(H.guide.includes('agreement between AIs is not verification'));
+const c=require('./public/coach.js');assert.match(c.transfer('hobby'),/weekly errands/);assert.match(c.transfer('week'),/hobby session/);assert.match(c.transfer('work'),/picnic/);assert.match(c.transfer('own'),/different area/);let q=c.fresh();q.hints[0]=2;assert.match(c.hint(q),/5\+10\+5=20/);console.log('PASS: independent transfer variants, worked-example arithmetic, external verification and optional recall');

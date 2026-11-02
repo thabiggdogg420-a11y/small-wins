@@ -1,0 +1,38 @@
+.theme-control{display:flex;align-items:center;gap:8px;margin-left:auto}.theme-control label{margin:0;font-size:12px;font-weight:600}.theme-control select{width:auto;min-width:100px;min-height:44px;margin:0;padding:9px 26px 9px 10px;font-size:14px;border-radius:9px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+html[data-theme=dark]{--ink:#edf2fc;--muted:#b4c0d3;--blue:#9bbcff;--green:#9bbcff;--line:#41516a;color:#edf2fc;background:#0d1421;color-scheme:dark}
+html[data-theme=dark] body{background:#0d1421;color:#edf2fc}
+[data-theme=dark] .app-ready header,[data-theme=dark] .app-ready .app-nav{background:#121d2f;border-color:#41516a}
+[data-theme=dark] .app-ready .brand:before{background:#9bbcff;box-shadow:none}
+[data-theme=dark] .app-ready header .badge,[data-theme=dark] .app-ready .badge{background:#202f47;color:#b4c0d3;border-color:#52617a}
+[data-theme=dark] .app-ready .card{background:#162238;border-color:#41516a}
+[data-theme=dark] .app-ready .next-win{background:#1c3156;border:1px solid #536b91}
+[data-theme=dark] .app-ready .next-win h2{color:#fff}
+[data-theme=dark] .app-ready .next-win p,[data-theme=dark] .app-ready .next-win .eyebrow,[data-theme=dark] .app-ready .next-win>button:last-child{color:#cddbf1}
+[data-theme=dark] .app-ready button,[data-theme=dark] .app-ready .file-button{background:#1b2a42;border-color:#667a99;color:#edf2fc}
+[data-theme=dark] .app-ready button:hover{background:#293d5d;border-color:#9bbcff}
+[data-theme=dark] .app-ready button.primary,[data-theme=dark] .app-ready button[aria-pressed=true]:not(.segment-nav button){background:#9bbcff;border-color:#9bbcff;color:#102143}
+[data-theme=dark] .app-ready button.primary:hover{background:#b6ceff;color:#102143}
+[data-theme=dark] .app-ready .next-win>button:last-child{background:transparent;border:0}
+[data-theme=dark] .app-ready .choices button{background:#1b2a42;border-color:#667a99}
+[data-theme=dark] .app-ready .choices button[aria-pressed=true]{background:#293f66!important;color:#edf2fc!important;border-color:#9bbcff!important}
+[data-theme=dark] .app-ready input:not([type=checkbox]),[data-theme=dark] .app-ready select,[data-theme=dark] .app-ready textarea{background:#0f1a2b;color:#edf2fc;border-color:#7487a6}
+[data-theme=dark] .app-ready ::placeholder{color:#aebbd0;opacity:1}
+[data-theme=dark] .app-ready .coach{background:#20314d;color:#dce7fa;box-shadow:inset 3px 0 #9bbcff}
+[data-theme=dark] .app-ready .notice{background:#20314d;color:#dce7fa}
+[data-theme=dark] .app-ready .segment-nav{background:transparent;border-color:#41516a}
+[data-theme=dark] .app-ready .segment-nav button{background:transparent;color:#b4c0d3;border:0}
+[data-theme=dark] .app-ready .segment-nav button[aria-pressed=true]{color:#b7cfff;background:transparent;border-bottom:3px solid #9bbcff}
+[data-theme=dark] .app-ready .checkpoint-map nav button[aria-current=step]{background:#293f66;color:#edf2fc;border-color:#9bbcff}
+[data-theme=dark] .app-ready .app-nav button{color:#b4c0d3;background:transparent;border:0}
+[data-theme=dark] .app-ready .app-nav button[aria-current=page]{color:#bed3ff;background:#273b60}
+[data-theme=dark] .app-ready footer{background:transparent;color:#b4c0d3;border-color:#41516a}
+[data-theme=dark] .app-ready a,[data-theme=dark] .app-ready #ai-handoff a{color:#b6ceff}
+[data-theme=dark] .app-ready .brand{color:#edf2fc}
+[data-theme=dark] .app-ready #delete,[data-theme=dark] #feedback,[data-theme=dark] #start-error{color:#ffb8aa}
+[data-theme=dark] .app-ready .eyebrow{color:#b4c0d3}
+[data-theme=dark] .app-ready :is(button,a,input,textarea,select,summary,h1,h2):focus-visible{outline:3px solid #ffd080;outline-offset:3px}
+[data-theme=dark] .skip-link{background:#162238;color:#edf2fc}
+.app-ready :disabled{opacity:1;cursor:not-allowed;background:#e6e9ee;color:#646f81;border-color:#adb7c5}
+[data-theme=dark] .app-ready :disabled{background:#263249;color:#acb7ca;border-color:#65738b}
+@media(max-width:600px){.app-ready header .badge{display:none}.app-ready header{gap:8px;padding:12px 16px}.theme-control{gap:6px}.theme-control select{min-width:96px;padding-right:20px}.theme-control label{font-size:11px}.app-ready header .brand{font-size:18px;gap:7px}}
+@media(prefers-reduced-motion:reduce){.app-ready *{transition:none!important;animation:none!important}}

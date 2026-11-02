@@ -1,0 +1,11 @@
+'use strict';
+const fs=require('node:fs'),assert=require('node:assert/strict');
+const d=fs.readFileSync('public/device-ai-ui.js','utf8'),p=fs.readFileSync('public/pasted-draft-ui.js','utf8'),r=fs.readFileSync('public/result-path-ui.js','utf8');
+for(const text of ['not Android or iPhone/iPad','does not start a model session or request a model download','available</strong> still needs your consent','Only <strong>session ready</strong> enables Generate','never need this experiment to finish'])assert(d.includes(text),text);
+assert(d.includes('aria-describedby="device-ai-check-help device-ai-status"'));
+assert(d.includes('data-route="ai/return">Check a pasted draft or prepared example instead'));
+for(const text of ['source actually says','reply added','still missing','two nights','weather, laundry access and activities','explicitly unknown'])assert(p.includes(text),text);
+assert(p.includes('aria-describedby="pasted-assumptions-help"'));
+assert(r.includes('Missing information stays unknown until you check it'));
+assert(d.includes('year and contact name are unknown'));
+console.log('PASS: compatibility guidance, no-download check explanation, available/ready distinction, direct fallback, facts/assumptions/unknowns and accessible check descriptions. Source contracts only.');

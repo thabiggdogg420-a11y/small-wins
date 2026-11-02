@@ -1,0 +1,13 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),D=require('./public/evidence-drill.js');
+for(let r=0;r<D.rounds.length;r++)for(let i=0;i<D.rounds[r].claims.length;i++){const q=D.rounds[r].claims[i];assert(!D.check(r,i,{}).ok);assert(D.check(r,i,q).ok);assert(!D.check(r,i,{...q,line:'99'}).ok);assert(!D.check(r,i,{...q,verdict:q.verdict==='supported'?'unsupported':'supported'}).ok);}
+const ids={};function el(){return {children:[],listeners:{},hidden:false,value:'',textContent:'',append(...a){this.children.push(...a)},prepend(...a){this.children.unshift(...a)},replaceChildren(){this.children=[]},setAttribute(){},addEventListener(k,f){this.listeners[k]=f},focus(){this.focused=true}};}const $=id=>ids[id]||(ids[id]=el());let returns=0,changes=0;$('lab-choice').onchange=()=>changes++;
+const ctx={EvidenceDrill:D,document:{createElement:el},learningShelf:el(),$,s:{started:true},returnToLab:()=>returns++};vm.createContext(ctx);vm.runInContext(fs.readFileSync('public/evidence-drill-ui.js','utf8'),ctx);
+function choose(i,verdict,line){const box=$('drill-claims').children[i];box.children[2].value=verdict;box.children[2].onchange();box.children[4].value=line;box.children[4].onchange();box.children[5].onclick();return box;}
+assert($('drill-next').hidden);let box=choose(0,'supported','2');assert.match(box.children[6].textContent,/Look again/);assert($('drill-next').hidden);
+D.rounds[0].claims.forEach((q,i)=>choose(i,q.verdict,q.line));assert(!$('drill-next').hidden);assert(!$('drill-use').hidden);
+// Editing a previously checked answer revokes completion immediately.
+box=$('drill-claims').children[0];box.children[2].value='supported';box.children[2].onchange();assert($('drill-next').hidden);choose(0,'unsupported','2');$('drill-next').onclick();assert.match($('drill-heading').textContent,/Transfer/);assert($('drill-use').hidden);assert.equal($('drill-notes').children.length,4);
+D.rounds[1].claims.forEach((q,i)=>choose(i,q.verdict,q.line));assert($('drill-next').hidden);assert(!$('drill-use').hidden);$('drill-use').onclick();assert.equal($('lab-choice').value,'summary');assert.equal(returns,1);assert.equal(changes,1);
+$('drill-reset').onclick();assert($('drill-use').hidden);assert.match($('drill-status').textContent,/0 of 3/);ctx.s.started=false;$('delete').listeners.click();assert.match($('drill-heading').textContent,/confident summary/);
+for(const file of ['public/evidence-drill.js','public/evidence-drill-ui.js'])assert(!/localStorage|fetch\(|XMLHttpRequest|sendBeacon/.test(fs.readFileSync(file,'utf8')));
+console.log('PASS: six answer keys; empty/wrong verdict/wrong source; UI targeted retry, invalidation, transfer, restart, summary-lab navigation, delete reset; no storage or network APIs.');
