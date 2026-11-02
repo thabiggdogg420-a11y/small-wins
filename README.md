@@ -47,3 +47,7 @@ The existing Worker build is `node scripts/build-measurement.mjs`, followed by `
 ## Privacy, limits and rights
 
 Session-only and optional browser-local storage have different retention behavior. Downloaded files remain after browser deletion. Mocked model tests do not establish compatibility with every device, and developer tests do not establish real novice learning outcomes. Original platform code is MIT-licensed; preserve third-party notices and see THIRD-PARTY-NOTICES.md. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Portable changed-task lesson pack
+
+Open `/lesson-pack.html` for a paper-friendly two-task worksheet and a separate checking/facilitator guide, with plain-text downloads. The second task changes output type and requires independent arithmetic plus identifying an unknown. No script, account, AI, added tracking, stored answers or progress-format change. Keep first attempt and support separate from correction. This is a prepared lesson, not evidence that a beginner learned or retained the method. Run `node lesson-pack-test.cjs` to check links, answer separation and lesson arithmetic.
