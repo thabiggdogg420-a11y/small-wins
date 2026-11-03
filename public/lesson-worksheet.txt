@@ -4,7 +4,7 @@ https://learn.free4allhub.com/lesson-worksheet
 Fictional practice · learner worksheet
 Make it useful.Check what changed.
 Write on paper or in your own text editor. This page does not collect or save answers. Use your browser’s Print command for a paper copy, or download the text version. Print/save does not submit anything.
-Download worksheet textGo to changed task
+Before going offline: save the separate checking guide as lesson-checks.txt from https://learn.free4allhub.com/lesson-checks.txt. Keep it closed until both first attempts are finished.
 
 1. Repair a reminder
 
@@ -29,7 +29,7 @@ Before opening answers, record support used for this task: none / hint or guidan
 Keep my first attempt unchanged here or on another sheet before correcting:
 
 3. Check, correct, take away
-After both first attempts, open the separate checking guide. Compare details, not just how polished your writing sounds. Keep the first attempt and correction separate.
+After both first attempts, open your saved lesson-checks.txt or visit https://learn.free4allhub.com/lesson-checks.html. Compare details, not just how polished your writing sounds. Keep the first attempt and correction separate.
 What I corrected, what remains uncertain, and what help I needed:
 My portable method
 Goal: name who the output is for and what they should be able to do.

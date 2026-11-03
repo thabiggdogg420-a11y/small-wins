@@ -1,6 +1,6 @@
 # Learn4Free
 
-[Open Learn4Free](https://small-wins-ai-learning-coach.thabiggdogg420.chatgpt.site) · [Free4AllHub — all projects](https://free4allhub.thabiggdogg420.chatgpt.site) · Repository name remains `small-wins` for existing links.
+[Open Learn4Free](https://learn.free4allhub.com) · [Free4AllHub — all projects](https://free4allhub.com) · Repository name remains `small-wins` for existing links.
 
 Small, practical lessons for learning to use AI: try a task, check what happened, revise it and keep a useful result. Prepared practice and external-provider handoff are distinct from optional real on-device model experiments. A completed exercise or self-report is not proof of mastery.
 
@@ -26,7 +26,7 @@ node measurement/test.mjs
 node measurement-hooks-test.cjs
 ```
 
-These are a useful starting subset, not full browser or novice-learning acceptance. All 32 root `*test.cjs` files passed in the export check. They cover specific learning/persistence flows using source/VM/DOM stubs, not rendered-browser or screen-reader acceptance. A historical host-specific browser harness is intentionally omitted. Report exactly what you ran.
+These are a useful starting subset, not full browser or novice-learning acceptance. All 34 root `*test.cjs` files passed in the export check. They cover specific learning/persistence flows using source/VM/DOM stubs, not rendered-browser or screen-reader acceptance. A historical host-specific browser harness is intentionally omitted. Report exactly what you ran.
 
 The existing Worker build is `node scripts/build-measurement.mjs`, followed by `node scripts/validate-measurement.mjs`. It reads browser source, measurement endpoint and migrations, then rewrites `dist/`. This export removes the original hosting-account metadata requirement. Output includes `dist/server/index.js` and schema source in `dist/migrations/`; deployment configuration is deliberately not included. Edit `public/`, not the generated Worker. None of these commands deploys it.
 
@@ -51,3 +51,7 @@ Session-only and optional browser-local storage have different retention behavio
 ## Portable changed-task lesson pack
 
 Open `/lesson-pack.html` for a paper-friendly two-task worksheet and a separate checking/facilitator guide, with plain-text downloads. The second task changes output type and requires independent arithmetic plus identifying an unknown. No script, account, AI, added tracking, stored answers or progress-format change. Keep first attempt and support separate from correction. This is a prepared lesson, not evidence that a beginner learned or retained the method. Run `node lesson-pack-test.cjs` to check links, answer separation and lesson arithmetic.
+
+## Beginner reassurance and standalone worksheet (public v55 source)
+
+The worksheet text now points explicitly to its separate checking guide, so a downloaded copy does not depend on page context. Beginner practice explains the distinction between a first attempt and feedback, and that stored practice can be reset. Run `node lesson-pack-test.cjs` and `node beginner-reassurance-test.cjs`; these source/DOM checks do not establish human learning outcomes or complete native reset-dialog acceptance.
