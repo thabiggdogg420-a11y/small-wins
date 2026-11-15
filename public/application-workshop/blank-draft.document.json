@@ -1,0 +1,32 @@
+{
+  "schema": "free4allhub-document",
+  "version": 1,
+  "title": "Blank fictional practice draft",
+  "language": "en",
+  "document": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "BLANK TEMPLATE — fictional practice only"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "[Write your own fictional draft here. Replace this instruction; do not submit it.]"
+          }
+        ]
+      }
+    ]
+  }
+}
