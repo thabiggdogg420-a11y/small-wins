@@ -1,0 +1,24 @@
+/* Free4AllHub family shell. Local tools retain their own save and privacy semantics. */
+:root{--family-paper:#f6f5ef;--family-surface:#fffefa;--family-ink:#172b27;--family-muted:#53625c;--family-primary:#1f5147;--family-line:#d5ddd5;--family-accent:#b45032;--family-radius:14px;--family-width:1200px;--family-font:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.family-header,.family-footer{font-family:var(--family-font);color:var(--family-ink);background:var(--family-paper);box-sizing:border-box}
+.family-header *,.family-footer *{box-sizing:border-box}
+.family-header{display:block;border-bottom:1px solid var(--family-line);width:100%;max-width:none;margin:0;padding:0}
+.family-wrap{width:min(calc(100% - 40px),var(--family-width));margin-inline:auto}
+.family-header-inner{display:flex;align-items:center;gap:28px;min-height:80px;padding-block:16px}
+.family-brand{display:inline-flex;gap:10px;align-items:center;flex-shrink:0;font-weight:800;font-size:1.1rem;text-decoration:none;color:var(--family-ink);letter-spacing:-.035em;min-height:44px}
+.family-mark{display:grid;place-items:center;background:var(--family-primary);color:#fff;width:36px;height:36px;border-radius:9px;font-size:1.35rem;font-weight:900;letter-spacing:-.08em}
+.family-nav{display:flex;align-items:center;justify-content:flex-end;flex:1;flex-wrap:wrap;gap:4px 8px}
+.family-nav a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:9px 12px;border-radius:7px;color:var(--family-muted);text-decoration:none;font-size:.93rem;font-weight:650;line-height:1.3;border-bottom:2px solid transparent}
+.family-nav a:hover{background:#e9eee6;color:var(--family-ink)}
+.family-nav a[aria-current="page"],.family-nav a[aria-current="true"]{background:#e6eee5;color:var(--family-primary);border-bottom-color:var(--family-primary)}
+.family-header a:focus-visible,.family-footer a:focus-visible{outline:3px solid #9c3b21;outline-offset:3px;text-decoration:underline}
+.family-context{font:600 .85rem/1.5 var(--family-font);color:var(--family-muted);padding:14px 0}
+.family-context a{color:var(--family-primary);text-underline-offset:3px}
+.family-footer{display:block;width:100%;max-width:none;margin:64px 0 0;padding:36px 0;border-top:1px solid var(--family-line)}
+.family-footer-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:28px;flex-wrap:wrap}
+.family-footer p{max-width:48ch;color:var(--family-muted);font-size:.88rem;line-height:1.6;margin:8px 0 0}
+.family-footer nav{display:flex;gap:8px 20px;flex-wrap:wrap}
+.family-footer nav a{display:inline-flex;align-items:center;min-height:44px;color:var(--family-primary);font-size:.9rem;text-underline-offset:3px}
+@media(max-width:800px){.family-header-inner{align-items:flex-start;gap:8px;flex-direction:column}.family-nav{justify-content:flex-start;width:100%;gap:2px 4px}.family-nav a{padding:9px 10px}.family-header-inner{padding-block:10px}}
+@media(max-width:420px){.family-wrap{width:calc(100% - 32px)}.family-nav a{padding:8px;font-size:.85rem}.family-footer{margin-top:40px}}
+@media(prefers-reduced-motion:reduce){.family-header *,.family-footer *{scroll-behavior:auto;transition:none}}
