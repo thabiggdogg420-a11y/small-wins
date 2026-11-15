@@ -1,0 +1,6 @@
+(function(root){'use strict';
+const P=typeof module!=='undefined'?require('./pack-cost.js'):root.PackCost;
+function prompt(input){P.compare(input);if(!['items','kg','litres','metres'].includes(input.unit))throw Error('Choose a supported common unit.');return `Help me check two ordinary pack offers, using only these facts. Same product quality and currency; unit is ${input.unit}. Quantity needed: ${input.need}. Offer A: ${input.aSize} per pack at ${input.aPrice}. Offer B: ${input.bSize} per pack at ${input.bPrice}. Prices include tax. Delivery, discounts and deposits are unknown, so exclude them and flag that limitation. Show unit price, whole packs needed (round UP), checkout total and leftovers for each. Explain whether the lowest unit price is also the lowest checkout bill. Do not invent prices or tell me a purchase is confirmed.`;}
+function check(input,a,b){const r=P.compare(input);const claims=[a,b].map(v=>{if(typeof v!=='string'||!/^\d+(?:\.\d{1,2})?$/.test(v.trim()))return null;const n=Number(v);return Number.isFinite(n)&&n<=100000000?n:null;});return {result:r,claims,matches:claims.map((v,i)=>v!==null&&Math.round(v*100)===Math.round(r.offers[i].total*100))};}
+const api={prompt,check};if(typeof module!=='undefined')module.exports=api;else root.PackAI=api;
+})(typeof window!=='undefined'?window:globalThis);
