@@ -1,0 +1,22 @@
+LEARN4FREE — REVIEWED RUN SHEET
+My small plan
+Window: 09:00–10:30 on one unspecified day. One person, one room. No calendar date, time zone or booking is implied.
+
+09:00–09:20 | Prepare materials (1, 20 min)
+09:20–09:50 | Make a sample (3, 30 min)
+10:00–10:10 | Pack materials (5, 10 min)
+
+UNALLOCATED TIME
+09:50–10:00 | 10 min
+10:10–10:30 | 20 min
+
+SOURCE CONSTRAINTS
+1: 20 min; fixed start 09:00; after none.
+3: 30 min; fixed start none; after 1.
+5: 10 min; fixed start none; after 3.
+
+MY CHECKING NOTE
+Confirm realistic durations and available materials.
+Fictional QA only.
+
+Local checks passed for the constraints entered. Learner review, not independent verification. Actual durations, travel, availability, accessibility, date/time-zone effects and real-world use are not verified. Nothing has been sent, booked or added to a calendar.
