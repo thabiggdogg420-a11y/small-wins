@@ -13,3 +13,12 @@ dist/
 *.sqlite3
 *.pem
 *-qa.png
+
+# Generated synthetic test outputs; reviewed dependencies remain tracked.
+verification/*
+!verification/poster-reference/
+verification/poster-reference/*
+!verification/poster-reference/fixture.cjs
+!verification/timetable-draft/
+verification/timetable-draft/*
+!verification/timetable-draft/baseline-*.txt
