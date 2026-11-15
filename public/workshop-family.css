@@ -1,0 +1,4 @@
+/* Static workshop retains its own local headings and file workflow. */
+body{max-width:none;margin:0;padding:0;background:var(--family-paper);color:var(--family-ink);font:1rem/1.6 var(--family-font)}body>header,body>main,body>footer,body>nav,body>a{max-width:1000px;margin-inline:auto;padding:20px;box-sizing:border-box}body>main h1{font-size:clamp(2.25rem,5vw,4rem);line-height:1.1;letter-spacing:-.035em}body>main a,body>header a{color:var(--family-primary)}body>main{overflow-wrap:anywhere}body>main a{min-height:44px}body>header{background:transparent;border:0;color:var(--family-muted)}a:focus-visible,summary:focus-visible{outline:3px solid #9c3b21;outline-offset:3px}@media print{.family-header{display:none!important}body>main{max-width:none;padding:0}}
+
+.workshop-skip{position:absolute;left:-10000px;top:8px;z-index:100;background:#fff;color:#172b27}.workshop-skip:focus{left:16px;padding:12px}
