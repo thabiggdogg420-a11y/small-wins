@@ -1,0 +1,48 @@
+LEARN4FREE — MY SMALL PLANNER RECORD
+Unfinished work is allowed. This text is not an import file. It contains only this planner, not the practice answers.
+Window start: 09:00
+Finish by: 10:30
+
+Activity 1
+Label:   Keep  spacing  
+Full duration (minutes): 020
+Fixed start: 09:00
+Must follow activity: 
+Proposed start: 09:00
+Proposed end: 09:20
+Activity 2
+Label: 
+Full duration (minutes): 
+Fixed start: 
+Must follow activity: 
+Proposed start: 
+Proposed end: 
+Activity 3
+Label: Make a sample
+Full duration (minutes): 030
+Fixed start: 
+Must follow activity: 1
+Proposed start: 09:20
+Proposed end: 09:50
+Activity 4
+Label: 
+Full duration (minutes): 
+Fixed start: 
+Must follow activity: 
+Proposed start: 
+Proposed end: 
+Activity 5
+Label: Pack materials
+Full duration (minutes): 010
+Fixed start: 
+Must follow activity: 3
+Proposed start: 10:00
+Proposed end: 
+
+CURRENT LOCAL CHECK
+Current entries have not been checked.
+MY CHECKING NOTE
+  café é 🦉
+<svg onload=bad()>\ quoted "text"  
+Exact review: Not currently reviewed.
+No automatic saving, import, calendar action or external transmission. Actual use and usefulness are unverified.
