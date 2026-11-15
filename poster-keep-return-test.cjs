@@ -1,0 +1,22 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs');
+const {fixture}=require('./verification/poster-reference/fixture.cjs');
+const ui=fs.readFileSync('public/poster-output-ui.js','utf8'),journey=fs.readFileSync('public/project-journey-ui.js','utf8');
+let count=0;function ok(value,label){assert.ok(value,label);count++;}
+ok(ui.includes('<details open><summary>Compare with this task’s requirement and draft</summary><pre id="poster-source">'),'current-task source comparison starts expanded');
+for(const label of ['Match the words.','Check the layout.','Remove private details.'])ok(ui.includes('<strong>'+label+'</strong>'),'existing checks have plain labels: '+label);
+for(const text of ['Poster picture file (SVG)','Editable project record (JSON)','A download request is not proof of saving','browser’s downloads list','unencrypted','synced folders','A good stopping point','no automatic file saving or sync','archival text fallback','never poster-preview approval','select your JSON file'])ok(journey.includes(text),text);
+ok(journey.includes("e('poster-keep-guide').hidden=!s.started||s.projectKind!=='poster'"),'poster-specific guide remains scoped');
+const t=fixture();t.run("s.artifact='FIRST PRIVATE SENTINEL';s.sourceBasis={facts:'FIRST SOURCE SENTINEL'};refreshResultPath()");
+ok(t.el('poster-source').textContent.includes('FIRST PRIVATE SENTINEL'),'first source available on first task');
+t.run("s.resultPath.phase='transfer';s.resultPath.transferTask='CHANGED REQUIREMENT';s.resultPath.transferDraft='CHANGED DRAFT';refreshResultPath()");
+ok(t.el('poster-source').textContent.includes('CHANGED REQUIREMENT'),'changed source visible');
+ok(t.el('poster-source').textContent.includes('CHANGED DRAFT'),'changed draft visible');
+ok(!t.el('poster-source').textContent.includes('FIRST'),'opening comparison cannot expose first answers');
+ok(!t.read().resultPath.transferExample,'comparison itself adds no example help');
+t.input('poster-text','NEW POSTER');t.fire('poster-build');t.approve();t.fire('poster-download');ok(t.downloads.length===0,'guidance cannot substitute for a learner note');
+t.input('poster-note','I inspected my changed requirement and the layout.');t.fire('poster-build');t.approve();t.fire('poster-download');ok(t.downloads.length===1,'existing reviewed download works');
+ok(!t.downloads[0].text.includes('FIRST'),'picture download excludes first source');
+ok(!t.downloads[0].text.includes('inspected'),'picture does not contain checking note');
+ok(t.el('poster-status').textContent.includes('not proof of saving'),'actual handler remains honest about download');
+console.log('PASS '+count+' keep-return source and actual-controller contracts; synthetic DOM only, not browser or beginner evidence.');
