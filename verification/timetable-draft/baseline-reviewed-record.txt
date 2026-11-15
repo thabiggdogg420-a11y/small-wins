@@ -1,0 +1,48 @@
+LEARN4FREE — MY SMALL PLANNER RECORD
+Unfinished work is allowed. This text is not an import file. It contains only this planner, not the practice answers.
+Window start: 09:00
+Finish by: 10:30
+
+Activity 1
+Label: Prepare materials
+Full duration (minutes): 020
+Fixed start: 09:00
+Must follow activity: 
+Proposed start: 09:00
+Proposed end: 09:20
+Activity 2
+Label: 
+Full duration (minutes): 
+Fixed start: 
+Must follow activity: 
+Proposed start: 
+Proposed end: 
+Activity 3
+Label: Make a sample
+Full duration (minutes): 030
+Fixed start: 
+Must follow activity: 1
+Proposed start: 09:20
+Proposed end: 09:50
+Activity 4
+Label: 
+Full duration (minutes): 
+Fixed start: 
+Must follow activity: 
+Proposed start: 
+Proposed end: 
+Activity 5
+Label: Pack materials
+Full duration (minutes): 010
+Fixed start: 
+Must follow activity: 3
+Proposed start: 10:00
+Proposed end: 10:10
+
+CURRENT LOCAL CHECK
+This timetable satisfies every entered duration, fixed start, order rule and window, with no overlap. Other valid schedules may exist. These are local rule checks, not proof that a real event is feasible or that you learned independently.
+MY CHECKING NOTE
+Confirm realistic durations and available materials.
+Fictional QA only.
+Exact review: Learner reviewed, not independently verified.
+No automatic saving, import, calendar action or external transmission. Actual use and usefulness are unverified.
