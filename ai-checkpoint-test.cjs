@@ -1,0 +1,5 @@
+const assert=require('node:assert/strict'),C=require('./public/ai-checkpoint.js');
+const base={format:'learn4free-ai-pack-checkpoint',version:1,entries:Object.fromEntries(Object.keys(C.limits).map(k=>[k,''])),firstChangedAttempt:null,usedHelp:false,answerRevealed:false};
+assert.deepEqual(C.parse(JSON.stringify(base)),base);
+for(const mutation of [r=>r.version=2,r=>r.entries.answer1=3,r=>r.entries.help='magic',r=>delete r.usedHelp,r=>r.entries.reason='x'.repeat(1501),r=>r.firstChangedAttempt={}]){const r=structuredClone(base);mutation(r);assert.throws(()=>C.parse(JSON.stringify(r)));}
+assert.throws(()=>C.parse('['));assert.throws(()=>C.parse('x'.repeat(150001)));const r=structuredClone(base);r.answerRevealed=true;assert.equal(C.parse(JSON.stringify(r)).usedHelp,true);r.entries.answer1='<script>alert(1)</script>';assert.equal(C.parse(JSON.stringify(r)).entries.answer1,r.entries.answer1);console.log('Checkpoint validation: versions, sizes, enums, malformed data, exposure preservation passed');
