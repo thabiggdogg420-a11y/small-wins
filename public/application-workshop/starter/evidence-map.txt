@@ -1,0 +1,45 @@
+FICTIONAL EXAMPLE EVIDENCE MAP
+
+Read fictional-role-and-facts.txt first. These invented facts support only the invented example. They are not facts about the visitor or independently verified employment evidence. The mapping covers every substantive applicant claim in both document versions.
+
+Identity and contact
+Jordan Vale and the example email in all documents: F01. The .invalid address is not a real contact destination. No phone, address or reference contact is supplied.
+
+CV profile
+“Volunteer reception helper”: F02.
+“welcoming visitors”: F03.
+“keeping attendance records”: F04.
+“writing shift handovers”: F05.
+“Interested in community information services”: F08, an interest only.
+
+CV experience labels and dates
+Eastbank role and September 2025 to February 2026: F02.
+Cedar Lane work experience and May to June 2025: F06. The “work experience” label must not be silently converted to paid employment.
+
+CV actions and skills
+Welcome, room directions, printed list and referral to coordinator: F03, addresses R01. This does not establish booking-system ownership or authority.
+V1 “Helped with attendance records”: F04, relevant to R02 but imprecise.
+V2 spreadsheet entry plus checking against paper register: F04, more precise evidence for R02. No metrics or software brand are established.
+Handover note, pending questions and room changes: F05, addresses R03-v2.
+Arranging stock with labels/checklist and reporting missing labels: F06, addresses R03-v1.
+Final skills line: visitor directions F03; simple spreadsheet entry F04; written handovers F05; following checklists F06. These skills stay bounded by the examples above.
+
+Cover letter opening
+Role, organisation and reference 0007: fictional vacancy brief.
+Interest in helping visitors find information and sessions: F08; it is motivation, not a claimed achievement.
+
+Cover letter evidence paragraphs
+Volunteer role and dates: F02. Welcome, room locations, session list and referral rather than making booking decisions: F03, linked to R01.
+Attendance totals, simple spreadsheet and paper-register check: F04, linked to R02. The role asks for accuracy; the applicant describes a checking method, not perfect accuracy.
+V1 stock, shelf labels, checklist and reporting missing labels: F06, linked to R03-v1.
+V2 written handover with pending questions and room changes: F05, linked to R03-v2. The written record being available to consult is F05, not a measured outcome.
+The courtesy closing adds no availability, start-date, pay, legal or other commitment.
+
+Omissions
+Education, qualifications, licences, certificates, references, paid employment, work eligibility, start date and availability: no support (F07). They are omitted. No metrics, applicant outcomes, ATS assurances or employment promises appear.
+
+Tracker
+All rows refer to the same fictional vacancy 0007 and the same closing wording. Each is a separate preparation checkpoint. Draft/revision statuses, next-action dates and notes are invented exercise events, explicitly labelled fictional. Filenames point to pack files that exist. Blank filenames mean no document is selected for that checkpoint. No “submitted” or interview status is implied.
+
+Blank templates
+Bracketed prompts ask the applicant to supply and verify their own facts. They do not assert that any experience or qualification exists. The blank tracker row contains only empty strings.
