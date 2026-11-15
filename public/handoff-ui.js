@@ -10,6 +10,15 @@ function myWinContext(){
 }
 function handoffContext(){const c={};if($('share-goal').checked){c.goal=s.purpose||'Not chosen yet — help me choose';c.experience=s.capability;c.projectKind=C.kind(s);}if($('share-project').checked)c.project=s.artifact;if($('share-evidence').checked){c.checkpoint=C.stage(s)[0];c.attempt=s.evidence[s.step];const r=s.reflections[s.step];c.reflection={outcome:r.outcome,support:r.support,observed:r.observed,check:r.check};}if($('share-note').checked)c.nextActionNote=s.externalNote||'';if($('share-result').checked){const win=myWinContext();if(win)c.myWin=win;}return c;}
 function checkHandoffContext(){if(handoffContextSnapshot!==null&&handoffContextSnapshot!==JSON.stringify(handoffContext()))staleHandoff();}
+function recordVisibleHandoffHelp(){
+ if(typeof currentRoute!=='function'||currentRoute()!=='ai/review'||!$('handoff-preview').value.trim()||typeof ResultPath==='undefined'||!ResultPath.unfinishedTransfer(s)||s.resultPath.transferExample)return;
+ // A stale preview remains a readable draft. Revisiting it reveals examples,
+ // even when its Copy button is blocked or it was built before the new task.
+ Object.assign(s.resultPath,{transferHelp:true,transferExample:true,transferSupport:'example',transferReviewed:false});
+ persist();if(typeof refreshResultPath==='function')refreshResultPath();staleHandoff();
+ $('handoff-status').textContent='This visible coaching preview contains earlier context or examples. Example help is recorded for your unfinished related attempt, even without copying. Rebuild for the current task, then review the exact text.';
+}
+if(typeof window!=='undefined')window.addEventListener('hashchange',()=>{checkHandoffContext();recordVisibleHandoffHelp();});
 function makeHandoff(){handoffStale=false;$('handoff-reviewed').disabled=false;$('handoff-preview').value=Handoff.build({mode:$('handoff-mode').value,context:handoffContext(),guideUrl:new URL('coach-guide.html',location.href).href});handoffContextSnapshot=JSON.stringify(handoffContext());$('handoff-reviewed').checked=false;if($('preview-context-status'))$('preview-context-status').textContent=Object.keys(handoffContext()).length?'This preview contains only the context you selected. Review the exact text below.':'Generic preview: no goal or project is included. Your AI will ask you to choose a goal. Tick goal above and rebuild if you want to include it.';$('handoff-status').textContent='Preview built locally. No handoff text has been sent. Review and edit it before copying.';}
 function reviewed(){checkHandoffContext();if(handoffStale){$('handoff-status').textContent='Choices changed. Build a new preview, then review it before copying or downloading.';return false;}if(!$('handoff-preview').value.trim()){$('handoff-status').textContent='Build a preview first.';return false;}if(!$('handoff-reviewed').checked){$('handoff-status').textContent='Review the exact preview and tick the confirmation first.';return false;}return true;}
 $('provider').onchange=providerInfo;$('make-handoff').onclick=makeHandoff;
@@ -19,9 +28,9 @@ $('copy-handoff').onclick=async()=>{if(!reviewed())return;try{await navigator.cl
 $('download-handoff').onclick=()=>{if(reviewed()){download('small-wins-coach-prompt.txt',$('handoff-preview').value,'text/plain');$('handoff-status').textContent='Download requested. Open the text file and paste it into your chosen AI yourself.';}};
 $('reset-handoff').onclick=()=>{handoffStale=false;handoffContextSnapshot=null;$('handoff-reviewed').disabled=false;$('handoff-preview').value='';$('handoff-reviewed').checked=false;for(const id of ['share-goal','share-project','share-evidence','share-note','share-result'])$(id).checked=false;$('handoff-status').textContent='Handoff draft cleared. Your project and learning progress are unchanged.';};
 $('save-external-note').onclick=()=>{s.externalNote=$('external-note').value.slice(0,1600);persist();$('handoff-status').textContent=s.save?'Next-action note saved on this browser with your progress.':'Next-action note kept for this session. Export progress to keep it after closing.';};
-function refreshHandoffState(){checkHandoffContext();if($('note-use-status'))$('note-use-status').textContent='';$('external-note').value=typeof s.externalNote==='string'?s.externalNote:'';if(!s.started&&!s.purpose){$('handoff-preview').value='';$('handoff-reviewed').checked=false;}}
+function refreshHandoffState(){recordVisibleHandoffHelp();checkHandoffContext();if($('note-use-status'))$('note-use-status').textContent='';$('external-note').value=typeof s.externalNote==='string'?s.externalNote:'';if(!s.started&&!s.purpose){$('handoff-preview').value='';$('handoff-reviewed').checked=false;}}
 for(const id of ['provider','handoff-mode','share-goal','share-project','share-evidence','share-note','share-result'])$(id).addEventListener('change',staleHandoff);
 // Bubble listeners see the real app handler's updated notes, including change-and-change-back.
-if(typeof document!=='undefined')for(const event of ['input','change','click'])document.addEventListener(event,checkHandoffContext);
+if(typeof document!=='undefined')for(const event of ['input','change','click'])document.addEventListener(event,()=>{checkHandoffContext();recordVisibleHandoffHelp();});
 refreshHandoffState();
 providerInfo();makeHandoff();
