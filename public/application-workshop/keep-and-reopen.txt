@@ -1,0 +1,22 @@
+KEEP YOUR OWN WORK AND CHECK THE KEPT COPY
+Choose one route. Nothing on this page saves automatically. Never overwrite your only copy. All formats here are unencrypted; use fictional facts only.
+
+Simple text route
+Save your first attempt in your own editor as application-practice-v1.txt. Save the changed draft separately as application-practice-v2.txt. Keep your claim/source notes and support record with them. Locate the actual files, close and reopen V2 in your editor, compare with your intended wording, then make one meaningful correction if needed. Save a new version and reopen it. Write the filename and result in your practice record. These text files are not importable Learn progress or Hub native document projects.
+
+Hub document route (optional existing tool)
+On the workshop keep-and-reopen page, use “Download blank native document template” to save blank-draft.document.json. If using the offline pack, locate its supplied blank-draft.document.json instead. Locate the actual saved file in your downloads or extracted pack; a click alone does not prove it was saved. Then open https://free4allhub.com/tools/documents/ . Save existing work first. Use the document file chooser to select that saved blank-draft.document.json, review the incoming file and explicitly choose “Open this document and replace current work”. Opening replaces; it does not merge. Cancel preserves your current work. Replace bracketed instructions with YOUR fictional draft. Do not rename a worked example and call it your own.
+
+Choose “Download editable project (JSON)”. Locate the actual file and check its contents. Reopen that actual saved JSON in a fresh Document workbench, review and explicitly replace, then compare. Make your meaningful revision, download another version and reopen it again. Keep V1 until V2 is checked. The editor is tab-only: closing or refreshing loses unexported changes. This lesson does not establish live tool or download availability.
+
+If you need a standard export, use the existing “Export Word document (.docx)” or “Export readable HTML” controls and inspect the actual result in its intended app. DOCX/HTML are separate exports, cannot be imported into the Hub editor and do not update when JSON is revised. Renaming an extension does not convert formats. This workshop supplies native JSON and readable HTML examples, not a DOCX export. Do not import Hub JSON as Learn progress.
+
+Optional Learn practice record
+For this full workshop, keep the text worksheet or Hub document route: the complete fact sheet is longer than the existing Learn facts fields (1,600 characters for pasted facts and 1,000 for a manual brief). Do not cut away evidence merely to fit it. The following is an optional next step for a separately scoped short harmless task that fits every displayed limit, not a way to import this full lesson.
+
+The existing Learn My AI → Return route can review a pasted prepared example or an external reply together with its original harmless facts and exact request. Label a prepared example accurately. Write your own correction and comparison before explicitly confirming adoption; save existing work first because adoption changes the active project and retains earlier records as history. It is not an automatic workshop import or an AI call. A manual draft can instead use the existing manual-brief review route without claiming it was AI-generated.
+
+Existing Learn progress export/import is a separate format. Use its export control, locate the real file, then import, inspect the exact preview and explicitly confirm. Imports leave automatic saving off. Answer-bearing previews/exports during unfinished related practice count as assistance under the existing rules; cancel if you do not want exposure. Do not use an example record to fill your transfer success. A text worksheet or Hub .document.json cannot substitute for Learn progress JSON.
+
+Before a real application
+Use the authentic vacancy's actual material, file, word-limit and deadline instructions. Confirm missing facts with the applicant; replace every fictional name, example address and placeholder. Inspect every sentence and metadata. This exercise grants no permission to submit, send, upload or contact anyone.
