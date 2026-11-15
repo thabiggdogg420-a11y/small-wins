@@ -1,0 +1,58 @@
+LEARN4FREE — TIMETABLE PRACTICE RECORD
+Task 2: A different workshop, a different order
+Fictional practice only. No AI runs here. Prepared responses are written examples; pasted AI authorship and sending are unverified. No grade, verified learning, real-world feasibility or actual-use pass is awarded.
+This text record is not an import file. Keep it to read later or manually copy your drafts back. No automatic saving. Downloads survive Clear.
+
+ORIGINAL FICTIONAL SOURCE
+Fictional practice source. One person, one room.
+Window: 10:00–12:00, all on the same day. Finish by 12:00.
+setup: Prepare materials; 25 minutes.
+demo: Demonstration; 20 minutes; starts exactly 10:30; after setup.
+break: Break before practice; 10 minutes; after demo.
+practice: Hands-on practice; 40 minutes; after break.
+pack: Pack away; 15 minutes; after practice.
+No activities overlap. Keep the listed order rules; empty time is allowed.
+
+OUTPUT RULES
+One person uses one room, so activities cannot overlap. Keep every activity once, its full duration, fixed start (if any), required order and the window. Gaps are allowed. Use one line per activity: activity ID | start | end. Use 24-hour HH:MM times on the same day; no header, bullets or code fences. A task may start exactly when its predecessor ends.
+
+FIRST SUBMITTED DRAFT — KEPT BEFORE FEEDBACK
+setup | 10:00 | 10:25
+demo | 10:30 | 10:50
+break | 10:50 | 11:00
+practice | 11:00 | 11:40
+pack | 11:45 | 12:00
+Origin declared: manual
+Other help declared before first check: none
+Help recorded before first check: {"hint":false,"example":false,"external":false,"person":false,"feedback":false,"planner":false}
+Request on page at first submission (sending unverified):
+
+First check feedback:
+This timetable satisfies every entered duration, fixed start, order rule and window, with no overlap. Other valid schedules may exist. These are local rule checks, not proof that a real event is feasible or that you learned independently.
+
+CURRENT REQUEST (may be a later correction request)
+
+
+UNSUBMITTED FIRST DRAFT
+Already preserved above.
+
+CURRENT CORRECTED TIMETABLE
+setup | 10:00 | 10:25
+demo | 10:30 | 10:50
+break | 10:50 | 11:00
+practice | 11:00 | 11:40
+pack | 11:45 | 12:00
+
+CURRENT LOCAL CHECK
+This timetable satisfies every entered duration, fixed start, order rule and window, with no overlap. Other valid schedules may exist. These are local rule checks, not proof that a real event is feasible or that you learned independently.
+Checks run in this tab: 1. Revisions after the first check have seen feedback.
+Current support record: constraint-check feedback
+Current other-help declaration: none
+
+MY CHECKING NOTE
+Keep the break before practice.
+Exact timetable/note review: Learner reviewed; not independent verification.
+
+TAKE THE METHOD WITH YOU
+State the window, full durations, fixed starts and required order. Ask for explicit start and end times. Check every activity once, every duration, overlaps and the deadline. Correct the proposal, not the facts. If it cannot fit, ask to change the scope or window. Confirm actual durations and availability before real use.
+Only this task is included; the other task's answer is not in this record.
