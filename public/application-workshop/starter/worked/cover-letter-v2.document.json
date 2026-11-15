@@ -1,0 +1,131 @@
+{
+  "schema": "free4allhub-document",
+  "version": 1,
+  "title": "Fictional Jordan Vale cover letter version 2",
+  "language": "en",
+  "document": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Application for Community Centre Support Assistant"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "FICTIONAL EXAMPLE ONLY. Replace or remove every example fact."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Jordan Vale | jordan.vale@example.invalid"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "8 November 2026"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Hiring team, Juniper Community Centre"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Dear hiring team,"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "I am applying for the Community Centre Support Assistant role, reference 0007. I am interested in helping visitors find the information and sessions they need."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "As a volunteer reception helper at Eastbank Community Room from September 2025 to February 2026, I welcomed visitors and explained room locations using a printed session list. I referred booking enquiries to the coordinator rather than making decisions outside my role."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "I also entered attendance totals in a simple spreadsheet and checked them against the paper register. This is relevant to your requirement to keep simple attendance records accurately."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Your revised brief asks for short written handovers. At Eastbank Community Room, I updated a handover note with pending questions and room changes after my shift. This gave the next volunteer a written record to consult."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Thank you for considering my application."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Kind regards,"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Jordan Vale"
+          }
+        ]
+      }
+    ]
+  }
+}
