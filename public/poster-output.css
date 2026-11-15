@@ -1,0 +1,9 @@
+.poster-output {margin-top:1.5rem;min-width:0;border:2px solid var(--line,#8a969b)}
+.poster-output pre {white-space:pre-wrap;overflow-wrap:anywhere;max-height:24rem;overflow:auto}
+.poster-output textarea,.poster-output select {max-width:100%;box-sizing:border-box}
+.poster-output .inline {display:flex;align-items:flex-start;gap:.65rem;margin:1rem 0}
+.poster-output .inline input {flex:0 0 auto;margin-top:.25rem}
+.poster-preview {max-width:42rem;margin:1rem auto;border:1px solid #637380;background:#e5e8e8}
+.poster-preview svg {display:block;width:100%;height:auto}
+.poster-output [hidden] {display:none!important}
+@media(max-width:650px){.poster-output{padding:1rem}.poster-output button{max-width:100%;white-space:normal}}
