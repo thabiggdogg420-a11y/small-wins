@@ -1,0 +1,26 @@
+LEARN4FREE — REVIEWED RUN SHEET
+A craft morning that fits
+Window: 09:00–11:30 on one unspecified day. One person, one room. No calendar date, time zone or booking is implied.
+
+09:10–09:30 | Set up the room (setup, 20 min)
+09:30–09:40 | Welcome (welcome, 10 min)
+09:45–10:30 | Making session (make, 45 min)
+10:30–10:45 | Break (break, 15 min)
+11:10–11:30 | Pack away (pack, 20 min)
+
+UNALLOCATED TIME
+09:00–09:10 | 10 min
+09:40–09:45 | 5 min
+10:45–11:10 | 25 min
+
+SOURCE CONSTRAINTS
+setup: 20 min; fixed start none; after none.
+welcome: 10 min; fixed start 09:30; after setup.
+make: 45 min; fixed start none; after welcome.
+break: 15 min; fixed start none; after make.
+pack: 20 min; fixed start none; after break.
+
+MY CHECKING NOTE
+Check actual availability.
+
+Local checks passed for the constraints entered. Learner review, not independent verification. Actual durations, travel, availability, accessibility, date/time-zone effects and real-world use are not verified. Nothing has been sent, booked or added to a calendar.
