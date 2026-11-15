@@ -1,0 +1,29 @@
+REVISE WITH EVIDENCE
+
+All examples below are fictional. A stronger sentence is more precise, not more impressive than its evidence.
+
+CV revision
+Before: Helped with attendance records.
+After: Entered attendance totals in a simple spreadsheet and checked them against the paper register.
+Support: F04 in fictional-role-and-facts.txt. The first sentence is vague but not false. The second identifies the action and checking method. It does not add an accuracy rate, volume, software brand or business result. All other CV content stays the same. The title records the new version.
+
+Cover letter revision
+The initial practice brief asks for routine instructions and checklists, so version 1 uses Cedar Lane Books and F06. The revised brief prioritises written handovers, so version 2 replaces that paragraph with the Eastbank handover example in F05. Jordan's experience has not changed. The draft date remains 8 November 2026 because this example edits the original draft; a real sender should use the actual date they choose to send.
+
+The replacement says: “Your revised brief asks for short written handovers. At Eastbank Community Room, I updated a handover note with pending questions and room changes after my shift. This gave the next volunteer a written record to consult.”
+
+This states what the note contained and its available use. It does not claim reduced errors, faster service, praise or a measurable improvement. Requirements R01 and R02 are still answered elsewhere in the letter. Every worked document keeps its visible fictional warning.
+
+Tracker revision
+The v2 native file is made by reopening the actual saved v1. In the first two preparation rows, status changes to “Fictional revision checked”, next action becomes reviewing all facts and final exports, the next-action date changes from 9 to 10 November 2026, and document filenames change from v1 to v2. The unresolved detail-check row stays unchanged. These are fictional manual checkpoints, not real activity or automated reminders. The file does not claim anything was submitted.
+
+Try the pattern with your own facts
+1. Save the existing native JSON and check the saved file.
+2. Reopen it through review and explicit replacement.
+3. Pick one vague sentence and identify its supporting fact.
+4. Rewrite the action concretely without extending what the fact proves.
+5. If the vacancy changes, revise emphasis rather than inventing experience.
+6. Save a second native file, reopen it, then export new standard files.
+7. Compare old and new text, and check the actual exports before choosing to share.
+
+There is no automatic link between the tracker and the documents. Update filenames manually. The generator demonstrates the same saved-file revision at parser level only; it does not establish current browser operation.
