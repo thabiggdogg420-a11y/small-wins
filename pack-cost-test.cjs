@@ -1,0 +1,21 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');const P=require('./public/pack-cost.js');
+const base={unit:'items',need:'10',aSize:'6',aPrice:'4.20',bSize:'10',bPrice:'7.50'};
+let r=P.compare(base);assert.equal(r.winner,'b');assert.ok(Math.abs(r.offers[0].unit-.7)<1e-12);assert.equal(r.offers[0].total,8.4);assert.equal(r.offers[0].packs,2);assert.equal(r.offers[0].left,2);
+assert.equal(P.compare({...base,need:'6'}).winner,'a');assert.equal(P.compare({...base,aSize:'10',aPrice:'7.50'}).winner,'tie');
+assert.equal(P.compare({...base,need:'0.3',aSize:'0.1'}).offers[0].packs,3);
+assert.equal(P.compare({...base,need:'0.300001',aSize:'0.1'}).offers[0].packs,4);
+for(const bad of ['', ' ', '0','-1','NaN','Infinity','1e3','1,000','<script>','1.0000001']) assert.throws(()=>P.compare({...base,need:bad}),undefined,bad);
+assert.throws(()=>P.compare({...base,aPrice:'0.000000001'}));assert.throws(()=>P.compare({...base,need:'1000000',aSize:'0.000001'}));
+const snapshot=JSON.stringify(base);P.compare(base);assert.equal(JSON.stringify(base),snapshot);
+const text=P.report(base,r,'A costs less','2 × 4.20 = 8.40 on paper');assert.match(text,/self-reported, not verified/);assert.match(text,/2 × 4.20/);assert.match(text,/no delivery/);
+const nodes={};function node(id){return nodes[id]??={value:'',hidden:false,disabled:false,textContent:'',children:[],handlers:{},addEventListener(t,f){this.handlers[t]=f;},replaceChildren(){this.children=[];},append(x){this.children.push(x);},focus(){this.focused=true;},click(){this.clicked=true;},reset(){}};}
+for(const k of ['unit','need','aSize','aPrice','bSize','bPrice','prediction','result','numbers','check','download','download-status','error','comparison','result-title','example','reset'])node(k);
+Object.entries(base).forEach(([k,v])=>node(k).value=v);node('prediction').value='A costs less';let downloads=0,record='';
+vm.runInNewContext(fs.readFileSync('public/pack-cost-ui.js','utf8'),{document:{getElementById:node,createElement:()=>node('created'+downloads++)},PackCost:P,Blob:class{constructor(parts){record=parts.join('');}},URL:{createObjectURL:()=> 'blob:test',revokeObjectURL(){}},setTimeout:f=>f(),confirm:()=>false});
+node('comparison').handlers.submit({preventDefault(){}});assert.equal(node('result').hidden,false);assert.equal(node('download').disabled,true);assert.equal(node('result-title').focused,true);
+node('check').value='I checked it';node('check').handlers.input();assert.equal(node('download').disabled,true);node('check-review').checked=true;node('check-review').handlers.change();assert.equal(node('download').disabled,false);node('download').handlers.click();assert.match(record,/I checked it/);
+node('aPrice').value='9';node('aPrice').handlers.input();assert.equal(node('result').hidden,true);assert.equal(node('check').value,'I checked it');assert.equal(node('download').disabled,true);
+node('comparison').handlers.submit({preventDefault(){}});node('check').value='check';node('need').value='12';record='';node('download').handlers.click();assert.equal(record,'');assert.match(node('error').textContent,/Calculate again/);
+const html=fs.readFileSync('public/pack-cost.html','utf8');assert.doesNotMatch(html,/usage.js|tracking.js|localStorage|fetch\(/);assert.match(html,/role="alert"/);assert.match(html,/inputmode="decimal"/);
+console.log('pack cost arithmetic, actual UI handlers, invalidation, download and privacy checks passed');
