@@ -1,0 +1,38 @@
+GUIDED WORKSHOP: JORDAN'S SHORT APPLICATION
+Read source-facts.txt first. It is the original Hub starter fact sheet, reproduced unchanged. Use R01, R02 and R03-v1 for the first draft. In this workshop write 80–130 words of application-body text, not a complete CV or a submission-ready letter. A real job ad may ask for different materials and formatting.
+
+Step 1 • Predict and check
+Before looking at the worked repair below, mark every claim in this deliberately flawed prepared draft as supported, contradicted or unknown. Write the source ID beside each claim. A missing fact is not automatically false, but it cannot be asserted here.
+
+DELIBERATELY FLAWED PREPARED DRAFT — DO NOT USE AS AN APPLICATION
+I am a certified community-services professional applying for the Community Centre Support Assistant role, reference 0007. During my paid employment at Eastbank Community Room from September 2025 to February 2026, I managed all bookings and improved attendance accuracy by 30% using Excel. I welcomed visitors and explained room locations. I can start immediately and work any weekend. At Cedar Lane Books I supervised the stock team. My experience guarantees excellent results for your centre.
+
+Your claim / source / decision:
+________________________________
+Your specific correction request:
+________________________________
+
+A useful request names the actual error, replacement evidence and limit. “Make it better” does not tell a person or AI what must change. Write your own request before comparing the example below.
+
+WORKED CHECK — reading beyond here is worked-example help
+Certified: unknown, F07 gives no qualification. Paid: contradicted by F02's volunteer label. Managed bookings: contradicted by F03's referral to the coordinator. 30% and Excel: unknown, F04 supplies neither a metric nor a software brand. Start immediately/weekends: unknown, F07. Supervised: unsupported by F06, which describes work experience and checklist use. Guaranteed results: unsupported. Welcome/directions: supported by F03; keep the printed-list detail and the limits of the role.
+
+Example specific correction request
+Using only F02–F04, F06 and F08 and the R03-v1 brief, write an 80–130-word application body. Call Eastbank volunteering and Cedar Lane work experience. Replace booking management with referring enquiries to the coordinator. Describe entering attendance totals and checking the paper register without a brand, metric or outcome claim. Remove the certificate, immediate start, weekend promise, supervisory claim and guarantee. Do not fill unknowns. Retain interest as interest. Return only the draft for my review.
+
+WORKED REPAIR V1 — prepared example, not model output
+I am applying for the Community Centre Support Assistant role, reference 0007. I am interested in community information services. As a volunteer reception helper at Eastbank Community Room from September 2025 to February 2026, I welcomed visitors and explained room locations using a printed session list. I referred booking enquiries to the coordinator. I entered attendance totals in a simple spreadsheet and checked them against the paper register. During work experience at Cedar Lane Books from May to June 2025, I arranged stock using shelf labels and a checklist, and reported missing labels to a supervisor.
+
+Trace it: vacancy/role/reference from the brief; interest F08; role/dates F02; welcome/referral F03; record/check F04; work-experience label, dates and checklist F06. No inferred qualification or commitment is needed. There can be other truthful drafts.
+
+Step 2 • Revise for a changed requirement
+Now read R03-v2. Before reading the next paragraph, revise your own draft to prioritise written handovers using F05. Keep your first draft unchanged. Explain why this change answers the new brief, instead of merely making the wording sound grander.
+
+WORKED REVISION V2
+Keep the first five sentences of V1. Replace its final sentence with: “After my shift, I updated a handover note with pending questions and room changes, giving the next volunteer a written record to consult.”
+This is supported by F05 and responds to R03-v2. It does not claim that handovers reduced errors. The change is an evidence-based change of emphasis, not a new achievement. Worked V1 and V2 native document files accompany this lesson; both are explicitly fictional.
+
+Your check explanation
+Which claim did you remove or narrow, and why? Which source supports the revision? What did you deliberately leave unknown? Did every remaining sentence pass your check? Record uncertainty rather than inventing a pass.
+
+Next: follow keep-and-reopen, then close this worked example and try transfer.txt.
