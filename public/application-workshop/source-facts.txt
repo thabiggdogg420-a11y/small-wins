@@ -1,0 +1,41 @@
+FICTIONAL ROLE AND FACTS
+
+Every person, organisation, vacancy and event in this exercise is invented. None describes the visitor. The facts below are the entire evidence supplied for the example, not verified employment records.
+
+VACANCY 0007
+Fictional organisation: Juniper Community Centre
+Role: Community Centre Support Assistant
+Initial practice brief: 8 November 2026
+Revised practice brief: 9 November 2026
+Closing wording: 20 November 2026, 17:00 local time (fictional; time zone unspecified)
+Requested practice materials: a short CV and a cover letter. This does not establish what any real vacancy requires.
+
+R01: Welcome visitors and explain where sessions take place.
+R02: Keep simple attendance records accurately.
+R03-v1: Follow routine written instructions and checklists.
+R03-v2: The revised fictional brief prioritises short written handovers for the next colleague. Checklist use remains relevant but is no longer the main third point.
+
+The revised brief changes the emphasis of the third requirement, not Jordan's history. The CV correction uses an existing fact. The revised letter uses a different existing fact.
+
+FACTS
+F01: Jordan Vale is an entirely fictional applicant. jordan.vale@example.invalid is a deliberately non-deliverable example address. No telephone number or street address is supplied.
+
+F02: Jordan was a volunteer reception helper at the fictional Eastbank Community Room from September 2025 to February 2026.
+
+F03: In that volunteer role, Jordan welcomed visitors, used a printed session list to explain room locations, and referred booking enquiries to the coordinator. Jordan did not manage bookings.
+
+F04: In that volunteer role, Jordan entered attendance totals in a simple spreadsheet and checked them against the paper register. No measured accuracy, volume, speed, software brand or improvement is established.
+
+F05: After a shift, Jordan updated a handover note with pending questions and room changes. The next volunteer could consult that written record. No measured effect on service quality is established.
+
+F06: Jordan completed work experience at the fictional Cedar Lane Books from May to June 2025. Jordan arranged stock using shelf labels and a checklist, and reported missing labels to a supervisor. This was not a management or paid-employment claim.
+
+F07: No qualification, educational record, licence, certificate, reference, paid employment, work eligibility, salary expectation, start date or availability is supplied. Leave these gaps unresolved rather than adding claims.
+
+F08: For this fictional exercise, Jordan has expressed an interest in community information services and in the support assistant role. This is a stated interest, not evidence of occupational expertise.
+
+GAPS TO CHECK FOR A REAL ROLE
+Hours, location, pay, eligibility, application destination, file limits, required materials, precise closing time zone and any availability requirement are not established here. Do not send anything to the fictional organisation or example address. Confirm a real vacancy with its authentic source. Ask the real applicant for missing personal facts; omit unneeded information.
+
+MATCHING EXERCISE
+R01 uses F03. R02 uses F04. R03-v1 uses F06. R03-v2 uses F05. F02 and F06 establish the labels and dates. F08 supports interest only. F07 prevents unsupported extra claims.
