@@ -26,7 +26,7 @@ node measurement/test.mjs
 node measurement-hooks-test.cjs
 ```
 
-These are a useful starting subset, not full browser or novice-learning acceptance. All 34 root `*test.cjs` files passed in the export check. They cover specific learning/persistence flows using source/VM/DOM stubs, not rendered-browser or screen-reader acceptance. A historical host-specific browser harness is intentionally omitted. Report exactly what you ran.
+These are a useful starting subset, not full browser or novice-learning acceptance. The current root `*test.cjs` suite is checked as part of the contributor export. They cover specific learning/persistence flows using source/VM/DOM stubs, not rendered-browser or screen-reader acceptance. A historical host-specific browser harness is intentionally omitted. Report exactly what you ran.
 
 The existing Worker build is `node scripts/build-measurement.mjs`, followed by `node scripts/validate-measurement.mjs`. It reads browser source, measurement endpoint and migrations, then rewrites `dist/`. This export removes the original hosting-account metadata requirement. Output includes `dist/server/index.js` and schema source in `dist/migrations/`; deployment configuration is deliberately not included. Edit `public/`, not the generated Worker. None of these commands deploys it.
 
@@ -55,3 +55,18 @@ Open `/lesson-pack.html` for a paper-friendly two-task worksheet and a separate 
 ## Beginner reassurance and standalone worksheet (public v55 source)
 
 The worksheet text now points explicitly to its separate checking guide, so a downloaded copy does not depend on page context. Beginner practice explains the distinction between a first attempt and feedback, and that stored practice can be reset. Run `node lesson-pack-test.cjs` and `node beginner-reassurance-test.cjs`; these source/DOM checks do not establish human learning outcomes or complete native reset-dialog acceptance.
+
+## Current released source (public v92)
+
+This contributor export now includes the released stock-list lesson at `/ai-stock.html`, timetable lesson at `/ai-schedule.html`, notes-to-CSV lesson at `/notes-csv.html`, and job-application workshop at `/application-workshop/`. See SOURCE.md for provenance, exclusions and limitations.
+
+Run all included source/VM regression suites from the repository root:
+
+```sh
+for test in *test.cjs; do node "$test" || exit; done
+node measurement/test.mjs
+node scripts/build-measurement.mjs
+node scripts/validate-measurement.mjs
+```
+
+Some tests create fictional output fixtures under `verification/`; these generated outputs are ignored. The checked-in poster fixture and timetable baselines are synthetic test dependencies, not real learner submissions or browser acceptance receipts. Use fictional content when testing. No new browser or learner acceptance is claimed by a source sync.
