@@ -24,6 +24,13 @@ function createProgressImport(o) {
     walk(value,0);
     return o.valid(value)&&['week','work','hobby','own'].includes(value.goal)&&['new','tried','comfortable'].includes(value.capability)&&['','document','spreadsheet','code','paper'].includes(value.tool)&&['','none','readonly','review'].includes(value.connection);
   }
+  function validateExport(raw) {
+    try {
+      if(typeof raw!=='string'||!raw.length||new TextEncoder().encode(raw).length>1000000)return false;
+      const value=JSON.parse(raw);
+      return !!(bounded(value)&&bounded(o.upgrade(value)));
+    } catch {return false;}
+  }
   function context(){return JSON.stringify(o.getState());}
   async function select(e) {
     const target=e.target, file=target.files&&target.files[0];
@@ -91,6 +98,6 @@ function createProgressImport(o) {
   $('import-apply').onclick=apply;
   $('import-cancel').onclick=()=>invalidate('Import canceled. No record was replaced. Any answer-preview help already disclosed remains recorded.');
   $('remember-import').onclick=remember;
-  return {invalidate,deleted,allowSave,select,apply};
+  return {invalidate,deleted,allowSave,select,apply,validateExport};
 }
 if(typeof module!=='undefined')module.exports={createProgressImport};
