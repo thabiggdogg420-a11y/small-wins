@@ -1,0 +1,16 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),PackCost=require('./public/pack-cost.js'),PackAI=require('./public/pack-ai.js');
+const base={unit:'kg',need:'3',aSize:'0.5',aPrice:'1.20',bSize:'2',bPrice:'4.50'};
+assert.match(PackAI.prompt(base),/Quantity needed: 3/);assert.doesNotMatch(PackAI.prompt({...base,secret:'PRIVATE'}),/PRIVATE/);assert.throws(()=>PackAI.prompt({...base,unit:'<script>'}));
+assert.deepEqual(PackAI.check(base,'7.20','9.00').matches,[true,true]);assert.deepEqual(PackAI.check(base,'','2.25').matches,[false,false]);assert.equal(PackAI.check(base,'7.201','9').claims[0],null);
+let captured='',consent=false;const nodes={};const n=id=>nodes[id]??={value:'',hidden:false,disabled:false,textContent:'',children:[],handlers:{},addEventListener(t,f){this.handlers[t]=f;},replaceChildren(){this.children=[];},append(x){this.children.push(x);},focus(){this.focused=true;},click(){},reset(){}};Object.entries(base).forEach(([k,v])=>n(k).value=v);n('prediction').value='A costs less';
+vm.runInNewContext(fs.readFileSync('public/pack-cost-ui.js','utf8'),{document:{getElementById:n,createElement:()=>({click(){}})},PackCost,PackAI,Blob:class{constructor(p){captured=p.join('')}},URL:{createObjectURL:()=> 'blob:x',revokeObjectURL(){}},setTimeout:f=>f(),confirm:()=>consent});
+const click=id=>n(id).handlers.click();const calculate=()=>n('comparison').handlers.submit({preventDefault(){}});
+calculate();click('ai-prepare');assert.equal(n('ai-panel').hidden,false);assert.equal(n('ai-prompt').value,PackAI.prompt(base));click('ai-check');assert.match(n('ai-feedback').textContent,/Paste/);
+n('ai-answer').value='A totals 7.20 and B totals 9.00';n('ai-a').value='7.20';n('ai-b').value='9.00';click('ai-check');assert.match(n('ai-feedback').textContent,/matches/);assert.equal(n('download').disabled,true);n('check').value='Six packs at 1.20 = 7.20, ignoring delivery';n('check').handlers.input();n('check-review').checked=true;n('check-review').handlers.change();click('download');assert.match(captured,/Optional AI-assisted/);assert.match(captured,/A totals/);
+click('ai-prepare');assert.equal(n('ai-answer').value,'A totals 7.20 and B totals 9.00');
+n('ai-answer').value='edited';n('ai-answer').handlers.input();captured='';click('download');assert.equal(captured,'');n('check-review').checked=true;n('check-review').handlers.change();click('download');assert.doesNotMatch(captured,/Pasted answer/);assert.match(captured,/No checked AI-answer/);
+n('need').value='4';n('need').handlers.input();assert.equal(n('ai-panel').hidden,true);assert.equal(n('download').disabled,true);click('ai-prepare');assert.match(n('error').textContent,/Calculate/);
+calculate();consent=true;click('ai-prepare');assert.match(n('ai-prompt').value,/Quantity needed: 4/);assert.equal(n('ai-answer').value,'');
+n('ai-answer').value='<script>wrong</script>';n('ai-a').value='1';n('ai-b').value='';click('ai-check');assert.match(n('ai-feedback').textContent,/does not match/);assert.match(n('ai-feedback').textContent,/missing/);click('reset');assert.equal(n('ai-answer').value,'');assert.equal(n('ai-panel').hidden,true);
+console.log('real-offer manual AI bridge model and actual UI: prompt allowlist, exact facts, checks, cancellation, stale review and reset passed');
