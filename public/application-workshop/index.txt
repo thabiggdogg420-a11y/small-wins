@@ -1,0 +1,21 @@
+CHECK AN AI-ASSISTED APPLICATION DRAFT
+A fictional, account-free workshop • about 25–40 minutes, at your pace
+
+Make something useful: a short application draft you can trace to facts, improve for a changed request, save and reopen. Then try a different fictional task without a model answer in front of you. This is preparation, not job submission or professional career advice. It makes no promise about employment, interviews, ATS compatibility or competence.
+
+You need a text editor or paper. No AI account is needed. All names, organisations and histories are invented. Do not enter real applicant data. Nothing here sends applications, uploads files, connects accounts or calls a model. These static pages do not save your writing. Write in your own file or on paper. Closing a page does not keep your work.
+
+1. Open the source facts, then the guided workshop. Read the deliberately flawed prepared draft as an example of mistakes an AI draft could contain. It is not a recorded response from a provider.
+2. Make your own marked-up check and correction request before reading the worked repair further down the guided workshop.
+3. Save your own first and revised drafts. Use the keep-and-reopen instructions.
+4. Close the guided example. Open the different task. Start its worksheet blank. Keep your first attempt before opening either optional help page. Hints and the checking example are separate files, not hidden text on the task page.
+5. Explain what you checked, what changed and what remains unknown. This is your own practice record, not a grade.
+
+Optional AI route
+Manual writing is equally valid. If you already use a provider, you may copy the exact fictional source facts and your edited request yourself. Read every character before sending. Do not add private information. A provider has its own terms, privacy and free-use limits; this lesson does not open one or transmit anything. Ask it for a draft, not an assessment of your ability. Keep its actual reply unchanged, label it as outside help, check each claim yourself and save your correction separately. The prepared example is enough to complete the workshop.
+
+Keep help honest
+On your worksheet record whether you used no help, hints, a worked answer, another person or an external AI. Opening an answer is answer help even if you close it. A revision after feedback is valuable but is not a new independent first attempt. Do not claim independence just because the final text is correct.
+
+Offline use
+Save the guided, source-facts, transfer and keep-and-reopen text files. Optionally save hints and checks separately before going offline, but keep them closed until needed. Local copies use the same filenames. Text files are worksheets, not Learn progress JSON or Hub document JSON. No worksheet automatically changes Learn progress.
