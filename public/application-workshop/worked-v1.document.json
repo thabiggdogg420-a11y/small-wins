@@ -1,0 +1,32 @@
+{
+  "schema": "free4allhub-document",
+  "version": 1,
+  "title": "Fictional Jordan workshop worked-v1",
+  "language": "en",
+  "document": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "FICTIONAL EXAMPLE ONLY — never submit"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "I am applying for the Community Centre Support Assistant role, reference 0007. I am interested in community information services. As a volunteer reception helper at Eastbank Community Room from September 2025 to February 2026, I welcomed visitors and explained room locations using a printed session list. I referred booking enquiries to the coordinator. I entered attendance totals in a simple spreadsheet and checked them against the paper register. During work experience at Cedar Lane Books from May to June 2025, I arranged stock using shelf labels and a checklist, and reported missing labels to a supervisor."
+          }
+        ]
+      }
+    ]
+  }
+}
