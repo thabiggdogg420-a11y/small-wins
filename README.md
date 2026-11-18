@@ -8,13 +8,17 @@ Core practice runs in the browser. External AI prompts are reviewed and copied b
 
 ## Preview locally
 
-With Python 3 installed, from the repository root:
+With a current supported Node.js installed, from the repository root:
 
 ```sh
-python3 -m http.server 8000 --bind 127.0.0.1 --directory public
+node scripts/preview-local.cjs
 ```
 
-Open `http://127.0.0.1:8000/?measurement_test=1`. `public/` is the editable browser source. This static preview does not implement the production `/api/usage` endpoint or extensionless Worker routing. The current hosted build includes bounded aggregate event measurement; it is not accurate to describe it as having no measurement at all.
+Open `http://127.0.0.1:8000/?measurement_test=1`. This dependency-free preview serves `public/` read-only on this computer, including extensionless lesson routes. For a busy port use `node scripts/preview-local.cjs 8080` and open port 8080 instead. Stop with Ctrl+C. It rejects write requests and does not expose the source tree or implement hosted `/api/usage` services. `node local-preview-test.cjs` checks its HTTP routing and boundaries.
+
+Python 3 remains an alternative: `python3 -m http.server 8000 --bind 127.0.0.1 --directory public`. That simple static server does not implement extensionless Worker routing; use the `.html` lesson links.
+
+No build or package installation is needed to preview the browser pages. `dist/` is a generated Worker bundle, not a static preview folder. External provider links still open external sites when chosen. Browser-local model availability depends on your browser, and each lesson's saving rules still apply. Changing host or port does not transfer browser-local storage: keep downloaded work before leaving. The hosted site has bounded aggregate event measurement; this local preview does not provide its backend.
 
 ## Focused checks
 
